@@ -2,7 +2,7 @@ from Controller.animalRaceGame import *
 from Models.foodClass import *
 import turtle
 def initialize():
-       
+
     # Register shapes
     turtle.register_shape("dog.gif")
     turtle.register_shape("monkey.gif")
@@ -18,7 +18,7 @@ def initialize():
     monkey, dog, turtle_racer, rabbit = game.create_animals()
     foods = game.create_food_items(8)
 
-    
+
     game.track.draw_lanes()
 
 
@@ -31,8 +31,8 @@ def initialize():
 
         print(monkey.speed,"   ",dog.speed,"   ",turtle_racer.speed,"   ",rabbit.speed)
         print(monkey.last_color,"   ",dog.last_color,"   ",turtle_racer.last_color,"   ",rabbit.speed)
-        
-       
+
+
 
         for food in foods:
             if isinstance(food, Banana) and abs(monkey.get_position()[0] - food.get_position()[0]) < 10 and abs(monkey.get_position()[1] - food.get_position()[1]) < 10:
